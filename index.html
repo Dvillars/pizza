@@ -1,45 +1,82 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
-    <link rel="stylesheet" href="css/styles.css" type="text/css">
-    <script src="js/scripts.js"></script>
-    <script src="js/jquery-3.1.1.min.js"></script>
-    <title>Pizza</title>
-  </head>
-  <body>
-    <div class="container">
-      <div class="jumbotron jumbo">
-        <h1>Pizza</h1>
-      </div>
-      <div class="well">
+<head>
+  <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+  <link rel="stylesheet" href="css/styles.css" type="text/css">
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <title>Pizza</title>
+</head>
+<body>
+  <div class="container">
+    <div class="jumbotron jumbo">
+      <h1>Pizza</h1>
+    </div>
+    <div id='row-one' class="row">
+      <div class="col-sm-4">
         <form id='pizza'>
-          <h4>Size</h4>
-          <div class="size">
-            <input id='a' type="radio" name="size" value="small">
-            <label for="a">Small</label>
-            <input id='b' type="radio" name="size" value="medium">
-            <label for="b">Medium</label>
-            <input id='c' type="radio" name="size" value="large">
-            <label for="c">Large</label>
+          <div class="size well">
+            <h4>Size</h4>
+            <div class="group">
+              <input id='a' type="radio" name="size" value="small">
+              <label for="a">Small</label>
+            </div>
+            <div class="group">
+              <input id='b' type="radio" name="size" value="medium">
+              <label for="b">Medium</label>
+            </div>
+            <div class="group">
+              <input id='c' type="radio" name="size" value="large">
+              <label for="c">Large</label>
+            </div>
           </div>
-          <h4>Toppings</h4>
-          <div class="toppings">
-            <input id='d' type="checkbox" name="toppings" value="cheese">
-            <label for="d">Cheese</label>
-            <input id='e' type="checkbox" name="toppings" value="mushrooms">
-            <label for="e">Mushrooms</label>
-            <input id='f' type="checkbox" name="toppings" value="pepperoni">
-            <label for="f">Pepperoni</label>
-            <input id='g' type="checkbox" name="toppings" value="ham">
-            <label for="g">Ham</label>
-            <input id='h' type="checkbox" name="toppings" value="pineapple">
-            <label for="h">Pineapple</label>
-            <input id='i' type="checkbox" name="toppings" value="sausage">
-            <label for="i">Sausage</label>
+        </div>
+        <div class="col-sm-4">
+          <div class="title">
+            <h3>Size</h3>
+            <img src="" alt="" />
+            <img src="" alt="" />
+            <h3>Toppings</h3>
+            <button type="submit" name="button" class='btn'>Order</button>
           </div>
-        </form>
+        </div>
+        <div class="col-sm-4">
+          <div class="toppings well">
+            <h4>Toppings</h4>
+            <div class="group">
+              <input id='d' type="checkbox" name="toppings" value="cheese">
+              <label for="d">Cheese</label>
+            </div>
+            <div class="group">
+              <input id='e' type="checkbox" name="toppings" value="mushrooms">
+              <label for="e">Mushrooms</label>
+            </div>
+            <div class="group">
+              <input id='f' type="checkbox" name="toppings" value="pepperoni">
+              <label for="f">Pepperoni</label>
+            </div>
+            <div class="group">
+              <input id='g' type="checkbox" name="toppings" value="ham">
+              <label for="g">Ham</label>
+            </div>
+            <div class="group">
+              <input id='h' type="checkbox" name="toppings" value="pineapple">
+              <label for="h">Pineapple</label>
+            </div>
+            <div class="group">
+              <input id='i' type="checkbox" name="toppings" value="sausage">
+              <label for="i">Sausage</label>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div id='row-two' class="row">
+      <div class="result">
+
       </div>
     </div>
-  </body>
+  </div>
+</div>
+</body>
 </html>
