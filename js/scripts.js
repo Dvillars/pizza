@@ -15,7 +15,7 @@ $(function() {
 
     newPizza = new Pizza(sizeString, toppingsArray);
 
-    $('.result').text('you have ordered a ' + sizeString + ' pizza with ' + toppingsArray + '.');
+    $('.result').text('you have ordered a ' + sizeString + ' pizza with ' + toppingsArray.length + ' toppings. the toppings are ' + toppingsArray + '.');
     $('.result').show();
   });
 });
