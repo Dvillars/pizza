@@ -3,6 +3,23 @@ function Pizza(sizeString, toppingsArray){
   this.toppings = toppingsArray;
 };
 
+function portion(portion) {
+  var cost = 8;
+  if (this.portionSize === 'large') {
+    cost += 4;
+  } else if (this.portionSize === 'medium') {
+    cost += 2;
+  } else {
+    cost += 0
+  }
+  return
+};
+
+Pizza.prototype.cost = function() {
+
+  return ;
+}
+
 $(function() {
   $('form#pizza').submit(function(event) {
     event.preventDefault();
