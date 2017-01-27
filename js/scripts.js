@@ -3,21 +3,27 @@ function Pizza(sizeString, toppingsArray){
   this.toppings = toppingsArray;
 };
 
-function portion(portion) {
-  var cost = 8;
-  if (this.portionSize === 'large') {
+function portionCost(portion, cost) {
+  if (portion === 'large') {
     cost += 4;
-  } else if (this.portionSize === 'medium') {
+  } else if (portion === 'medium') {
     cost += 2;
   } else {
     cost += 0
   }
-  return
+  return cost
+};
+
+function toppingCost(toppingCount, cost) {
+  cost += toppingCount
+  return cost
 };
 
 Pizza.prototype.cost = function() {
-
-  return ;
+  var cost = 8;
+  cost = portionCost(this.portionSize, cost);
+  cost = toppingCost(this.toppings.length, cost)
+  return cost;
 }
 
 $(function() {
@@ -32,7 +38,7 @@ $(function() {
 
     newPizza = new Pizza(sizeString, toppingsArray);
 
-    $('.result').text('you have ordered a ' + sizeString + ' pizza with ' + toppingsArray.length + ' toppings. the toppings are ' + toppingsArray + '.');
+    $('.result').text('Dose this look right???  A ' + newPizza.portionSize + ' pizza with ' + newPizza.toppings.length + ' toppings. The toppings are ' + newPizza.toppings + '.');
     $('.result').show();
   });
 });

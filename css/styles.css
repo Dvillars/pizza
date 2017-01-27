@@ -8,3 +8,7 @@ label {
 .result {
   display: none;
 }
+
+h4 {
+  margin-bottom: 0px;
+}
