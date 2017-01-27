@@ -1,8 +1,23 @@
 label {
   margin-right: 10px;
 }
-.size, .toppings, .title {
+
+.title {
+  margin-top: 50px;
+}
+
+.size, .toppings {
   text-align: center;
+}
+
+button {
+  color: white;
+  margin-top: 10px;
+}
+
+button:active {
+  color: transparent;
+  text-shadow: 2px 2px white;
 }
 
 .result {
@@ -11,4 +26,20 @@ label {
 
 h4 {
   margin-bottom: 0px;
+}
+
+h3, img {
+  margin: 0px;
+}
+
+.lefty {
+  text-align: left;
+}
+
+.middley {
+  text-align: center;
+}
+
+.righty {
+  text-align: right;
 }

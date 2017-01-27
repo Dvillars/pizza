@@ -4,9 +4,9 @@ function Pizza(sizeString, toppingsArray){
 };
 
 function portionCost(portion, cost) {
-  if (portion === 'large') {
+  if (portion === 'Large') {
     cost += 4;
-  } else if (portion === 'medium') {
+  } else if (portion === 'Medium') {
     cost += 2;
   } else {
     cost += 0
@@ -38,7 +38,9 @@ $(function() {
 
     newPizza = new Pizza(sizeString, toppingsArray);
 
-    $('.result').text('Dose this look right???  A ' + newPizza.portionSize + ' pizza with ' + newPizza.toppings.length + ' toppings. The toppings are ' + newPizza.toppings + '.');
+    $('.result1').text('A ' + newPizza.portionSize + ' pizza with ' + newPizza.toppings.length + ' toppings.');
+    $('.result2').text('The toppings are :' + newPizza.toppings.join(', ') + '.');
+    $('.result3').text(' This will cost you ' + newPizza.cost() + ' dollars +tax.');
     $('.result').show();
   });
 });
