@@ -1,14 +1,21 @@
+function Pizza(sizeString, toppingsArray){
+  this.portionSize = sizeString;
+  this.toppings = toppingsArray;
+};
+
 $(function() {
   $('form#pizza').submit(function(event) {
     event.preventDefault();
-    var size = $('input[name="size"]:checked').val();
-    var toppings = [];
+    var sizeString = $('input[name="size"]:checked').val();
+    var toppingsArray = [];
     $("input:checkbox[name='toppings']:checked").each(function(){
-      var topping = $(this).val();
-      toppings.push(topping);
+      var toppingString = $(this).val();
+      toppingsArray.push(toppingString);
     });
 
-    $('.result').text('you have ordered a ' + size + ' pizza with ' + toppings + '.');
+    newPizza = new Pizza(sizeString, toppingsArray);
+
+    $('.result').text('you have ordered a ' + sizeString + ' pizza with ' + toppingsArray + '.');
     $('.result').show();
   });
 });
