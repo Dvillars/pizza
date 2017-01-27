@@ -2,7 +2,7 @@ $(function() {
   $('form#pizza').submit(function(event) {
     event.preventDefault();
     var size = $('input[name="size"]:checked').val();
-    var toppings = [];//$("input[name='toppings']:checked").val();
+    var toppings = [];
     $("input:checkbox[name='toppings']:checked").each(function(){
       var topping = $(this).val();
       toppings.push(topping);
